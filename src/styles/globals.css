@@ -42,10 +42,10 @@ a {
 }
 
 html {
-  color-scheme: dark;
+  color-scheme: transparent;
 }
 body {
-  @apply min-h-screen-safe bg-white dark:bg-black text-black dark:text-white;
+  @apply min-h-screen-safe bg-white dark:bg-transparent text-black dark:text-white;
 }
 
 @layer base {
@@ -83,7 +83,7 @@ body {
   }
 
   .dark {
-    --background: 224 71% 4%;
+    --background: 224 71% 40%;
     --foreground: 213 31% 91%;
 
     --muted: 223 47% 11%;
@@ -98,8 +98,8 @@ body {
     --border: 216 34% 17%;
     --input: 216 34% 17%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 1.2%;
+    --primary: 210 10% 10%;
+    --primary-foreground: 222.2 10.4% 12%;
 
     --secondary: 222.2 47.4% 11.2%;
     --secondary-foreground: 210 40% 98%;
