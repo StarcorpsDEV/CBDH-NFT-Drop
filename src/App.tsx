@@ -24,6 +24,7 @@ import {
   primaryColorConst,
   themeConst,
 } from "./consts/parameters";
+import { Analytics } from "@vercel/analytics/react"
 
 const urlParams = new URL(window.location.toString()).searchParams;
 const contractAddress = 
@@ -302,6 +303,7 @@ export default function Home() {
   }
 
   return (
+    <Analytics />
     <div className="w-screen min-h-screen">
       <ConnectWallet className="!absolute !right-4 !top-4" theme={theme} />
       <div className="grid h-screen grid-cols-1 lg:grid-cols-12">
