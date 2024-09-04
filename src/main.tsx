@@ -12,6 +12,7 @@ import {
   relayerUrlConst,
   clientIdConst,
 } from "./consts/parameters";
+import { Analytics } from "@vercel/analytics/react"
 
 const container = document.getElementById("root");
 const root = createRoot(container!);
@@ -31,6 +32,7 @@ const clientId = urlParams.get("clientId") || clientIdConst || "";
 root.render(
   <React.StrictMode>
     <ThirdwebProvider activeChain={chain} sdkOptions={sdkOptions} clientId={clientId}>
+    <Analytics />
       <Toaster />
       <App />
     </ThirdwebProvider>
